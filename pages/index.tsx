@@ -1,13 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { PostCard, PostWidget, Categories } from '../components';
+import { getPosts } from '../services';
+import Post from '../interfaces/Post';
 
-const posts = [
-  { title: 'Post de prova', excerpt: 'Aquest és un post de prova.' },
-  { title: 'Post de prova 2', excerpt: 'Aquest és un altre post de prova.' },
-];
-
-const Home: NextPage = () => (
+const Home: NextPage<{ posts: Post[] }> = ({ posts }) => (
   <div className="container px-10 mx-auto mb-8">
     <Head>
       <title>Blog TAC</title>
@@ -30,5 +27,11 @@ const Home: NextPage = () => (
     </div>
   </div>
 );
+
+export async function getStaticProps() {
+  const posts = await (getPosts() || []);
+
+  return { props: { posts } };
+}
 
 export default Home;
