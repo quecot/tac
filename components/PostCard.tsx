@@ -8,7 +8,7 @@ interface Props {
 }
 
 const PostCard: React.FC<Props> = ({ post }) => (
-  <div className="p-0 pb-12 mb-8 bg-white rounded-lg shadow-lg lg:p-8">
+  <div key={post.slug} className="p-0 pb-12 mb-8 bg-white rounded-lg shadow-lg lg:p-8">
     <div className="relative mb-6 overflow-hidden shadow-md pb-80">
       <img
         src={post.featuredImage.url}
