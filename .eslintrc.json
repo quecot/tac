@@ -13,6 +13,8 @@
     }
   ],
   "rules":  {
+    "no-unused-vars": "off",
+    "import/no-cycle": "off",
     "react/jsx-filename-extension": [
       2,
       {
