@@ -14,7 +14,7 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => (
       <div className="col-span-1 lg:col-span-8">
         {
           posts.map((post) => (
-            <PostCard post={post} key={post.title} />
+            <PostCard post={post.node} key={post.title} />
           ))
         }
       </div>

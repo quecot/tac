@@ -3,7 +3,9 @@ import Link from 'next/link';
 
 const categories = [
   { name: 'Informació del blog', slug: 'info' },
-  { name: "Tecnologies per a l'Aprenentatge i el Coneixement", slug: 'tac' },
+  { name: 'Altres', slug: 'altres' },
+  { name: 'TAC', slug: 'tac' },
+  { name: 'Educació', slug: 'educacio' },
 ];
 
 const Header: React.FC = () => (
