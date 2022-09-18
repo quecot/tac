@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { v4 as uuid } from 'uuid';
 import { PostCard, PostWidget, Categories } from '../components';
 import { getPosts } from '../services';
 import Post from '../interfaces/Post';
@@ -14,13 +15,13 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => (
       <div className="col-span-1 lg:col-span-8">
         {
           posts.map((post) => (
-            <PostCard post={post.node} key={post.title} />
+            <PostCard post={post.node} key={uuid()} />
           ))
         }
       </div>
       <div className="col-span-1 lg:col-span-4">
         <div className="relative lg:sticky top-8">
-          <PostWidget />
+          <PostWidget slug="" categories={[]} />
           <Categories />
         </div>
       </div>
