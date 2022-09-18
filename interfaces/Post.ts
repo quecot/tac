@@ -16,6 +16,7 @@ interface Post {
         url: string
       }
       name: string
+      bio: string
     }
     categories: Category[]
   }
