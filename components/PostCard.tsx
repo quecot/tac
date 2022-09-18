@@ -1,7 +1,9 @@
 import React from 'react';
 import moment from 'moment';
 import Link from 'next/link';
+import { v4 as uuid } from 'uuid';
 import Post from '../interfaces/Post';
+import Tag from './Tag';
 
 interface Props {
   post: Post['node']
@@ -46,11 +48,14 @@ const PostCard: React.FC<Props> = ({ post }) => (
         </span>
       </div>
     </div>
-    <p className="px-4 mb-8 text-lg font-normal text-center text-gray-700 lg:p-10">{post.excerpt}</p>
+    <p className="px-4 mb-8 text-lg font-normal text-center text-gray-700 lg:p-4">{post.excerpt}</p>
     <div className="text-center">
       <Link href={`/post/${post.slug}`}>
         <span className="inline-block px-8 py-3 text-lg font-medium text-white transition duration-500 transform bg-pink-600 rounded-full cursor-pointer hover:-translate-y-1">Llegeix més</span>
       </Link>
+    </div>
+    <div className="flex flex-wrap items-center justify-center gap-2 my-8">
+      {post.categories.map((category) => <Tag key={uuid()} category={category} />)}
     </div>
   </div>
 );
