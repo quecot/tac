@@ -1,5 +1,4 @@
 import { request, gql } from 'graphql-request';
-import Category from '../interfaces/Category';
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
