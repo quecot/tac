@@ -15,10 +15,6 @@ interface Props {
 const CategoryPost: React.FC<Props> = ({ posts, categoryName }) => {
   const router = useRouter();
 
-  if (router.isFallback) {
-    return <Loader />;
-  }
-
   return (
     <div className="container px-4 mx-auto mb-8">
       <Head>
@@ -60,6 +56,6 @@ export async function getStaticPaths() {
   const categories: Category[] = await getCategories();
   return {
     paths: categories.map(({ slug }) => ({ params: { slug } })),
-    fallback: true,
+    fallback: false,
   };
 }
