@@ -28,6 +28,9 @@ const PostWidget: React.FC<Props> = ({ categories, slug }) => {
         {slug ? 'Posts relacionats' : 'Posts recents'}
       </h3>
       {
+        relatedPosts.length === 0 ? <div>No n&apos;hem trobat :(</div> : <div />
+      }
+      {
         relatedPosts.map((post) => (
           <div key={post.title} className="flex items-center w-full mb-4">
             <div className="flex-none w-16">
