@@ -3,10 +3,9 @@ import moment from 'moment';
 import Link from 'next/link';
 import { getRecentPosts, getSimilarPosts } from '../services';
 import Post from '../interfaces/Post';
-import Category from '../interfaces/Category';
 
 interface Props {
-  categories: Category[]
+  categories: string[]
   slug: string
 }
 
