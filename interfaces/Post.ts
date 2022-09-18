@@ -9,6 +9,7 @@ interface Post {
     featuredImage: {
       url: string
     }
+    content: { raw: { children : Array<{ children: Array<any>, type: string}> }},
     title: string
     author: {
       photo: {
