@@ -1,3 +1,5 @@
+import Category from './Category';
+
 interface Post {
   title: string
   node: {
@@ -14,6 +16,7 @@ interface Post {
       }
       name: string
     }
+    categories: Category[]
   }
 }
 
