@@ -21,6 +21,7 @@ const CategoryPost: React.FC<Props> = ({ posts }) => {
     <div className="container px-10 mx-auto mb-8">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="col-span-1 lg:col-span-8">
+          {posts.length === 0 ? <div className="w-full px-4 py-8 bg-white rounded-lg">No s&apos;han trobat publicacions en aquesta categoria :(</div> : <div />}
           {posts.map((post, index) => (
             <PostCard key={index} post={post.node} />
           ))}
