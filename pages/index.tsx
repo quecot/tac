@@ -6,7 +6,7 @@ import { getPosts } from '../services';
 import Post from '../interfaces/Post';
 
 const Home: NextPage<{ posts: Post[] }> = ({ posts }) => (
-  <div className="container px-10 mx-auto mb-8">
+  <div className="container px-4 mx-auto mb-8">
     <Head>
       <title>Blog TAC</title>
       <link rel="icon" href="/favicon.ico" />
