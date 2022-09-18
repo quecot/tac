@@ -1,6 +1,8 @@
 import moment from 'moment';
 import React from 'react';
+import { v4 as uuid } from 'uuid';
 import Post from '../interfaces/Post';
+import Tag from './Tag';
 
 interface Props {
   post: Post['node']
@@ -101,6 +103,10 @@ const PostDetail: React.FC<Props> = ({ post }) => {
             const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item, ''));
             return (getContentFragment(index, children, typeObj, typeObj.type));
           })}
+          <div className="flex flex-wrap items-center gap-4 mt-8">
+            <h3 className="text-lg font-semibold">Etiquetes:</h3>
+            {post.categories.map((category) => <Tag key={uuid()} category={category} />)}
+          </div>
         </div>
       </div>
     </div>

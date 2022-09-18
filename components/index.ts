@@ -8,3 +8,4 @@ export { default as PostDetail } from './PostDetail';
 export { default as CommentsForm } from './CommentsForm';
 export { default as Comments } from './Comments';
 export { default as Loader } from './Loader';
+export { default as Tag } from './Tag';
