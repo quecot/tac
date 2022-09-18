@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { NextPage } from 'next';
+import Head from 'next/head';
 import { getPosts, getPostDetails } from '../../services';
 
 import {
@@ -10,6 +11,10 @@ import Post from '../../interfaces/Post';
 
 const PostDetails: NextPage<{ post: Post['node']}> = ({ post }) => (
   <div className="container px-4 mx-auto mb-8">
+    <Head>
+      <title>{`TAC: ${post.title}`}</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
     <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
       <div className="col-span-1 lg:col-span-8">
         <PostDetail post={post} />
