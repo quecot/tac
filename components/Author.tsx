@@ -1,6 +1,15 @@
 import React from 'react';
 
-const Author: React.FC = () => (
+interface Props {
+  author: {
+    photo: {
+        url: string;
+    };
+    name: string;
+  }
+}
+
+const Author: React.FC<Props> = ({ author }) => (
   <div>Author</div>
 );
 

@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Comments: React.FC = () => (
+interface Props {
+  slug: string
+}
+
+const Comments: React.FC<Props> = ({ slug }) => (
   <div>Comments</div>
 );
 
