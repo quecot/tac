@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Tag: React.FC<Props> = ({ category }) => (
-  <div className="inline-block px-4 py-2 font-medium text-white bg-pink-600 rounded-lg cursor-pointer whitespace-nowrap">
+  <div className="inline-block px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg cursor-pointer whitespace-nowrap">
     <Link href={`/category/${category.slug}`}>
       {category.name}
     </Link>
