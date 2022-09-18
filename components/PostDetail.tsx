@@ -42,7 +42,7 @@ const PostDetail: React.FC<Props> = ({ post }) => {
       case 'heading-three':
         return <h3 key={index} className="mb-4 text-xl font-semibold">{modifiedText.map((item: any, i: number) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
       case 'paragraph':
-        return <p key={index} className="mb-8">{modifiedText.map((item: any, i: number) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+        return <p key={index} className="mb-4">{modifiedText.map((item: any, i: number) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
       case 'heading-four':
         return <h4 key={index} className="mb-4 font-semibold text-md">{modifiedText.map((item: any, i: number) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'image':
