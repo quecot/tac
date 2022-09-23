@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import Head from 'next/head';
 import { getCategories, getCategoryPost } from '../../services';
-import { PostCard, Categories, Loader } from '../../components';
+import { PostCard, Categories } from '../../components';
 import Category from '../../interfaces/Category';
 import Post from '../../interfaces/Post';
 
