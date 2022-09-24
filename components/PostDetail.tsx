@@ -57,6 +57,8 @@ const PostDetail: React.FC<Props> = ({ post }) => {
             src={obj.src}
           />
         );
+      case 'code-block':
+        return <div key={index} dangerouslySetInnerHTML={{ __html: modifiedText[0] }} />;
       default:
         return modifiedText;
     }
