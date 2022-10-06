@@ -32,7 +32,10 @@ const Home: NextPage<{ posts: Post[] }> = ({ posts }) => (
 export async function getStaticProps() {
   const posts = await (getPosts() || []);
 
-  return { props: { posts } };
+  return {
+    props: { posts },
+    revalidate: 10,
+  };
 }
 
 export default Home;
