@@ -13,9 +13,9 @@ const Categories: React.FC = () => {
 
   return (
     <div className="p-8 pb-12 mb-8 bg-white rounded-lg shadow-lg">
-      <h3 className="pb-4 mb-8 text-xl font-semibold border-b">
+      <h2 className="pb-4 mb-8 text-xl font-semibold border-b">
         Categories
-      </h3>
+      </h2>
       {
         categories.map((category) => (
           <Link key={category.slug} href={`/category/${category.slug}`}>

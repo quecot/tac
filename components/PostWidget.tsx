@@ -24,9 +24,9 @@ const PostWidget: React.FC<Props> = ({ categories, slug }) => {
 
   return (
     <div className="p-8 mb-8 bg-white rounded-lg shadow-lg">
-      <h3 className="pb-4 mb-8 text-xl font-semibold border-b">
+      <h2 className="pb-4 mb-8 text-xl font-semibold border-b">
         {slug ? 'Posts relacionats' : 'Posts recents'}
-      </h3>
+      </h2>
       {
         relatedPosts.length === 0 ? <div>No n&apos;hem trobat :(</div> : <div />
       }

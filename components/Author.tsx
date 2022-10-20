@@ -18,7 +18,7 @@ const Author: React.FC<Props> = ({ author }) => (
         src={author.photo.url}
       />
     </div>
-    <h3 className="my-4 text-xl font-bold text-white">{author.name}</h3>
+    <h2 className="my-4 text-xl font-bold text-white">{author.name}</h2>
     <p className="text-lg text-white">{author.bio}</p>
   </div>
 );
