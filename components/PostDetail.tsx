@@ -106,7 +106,7 @@ const PostDetail: React.FC<Props> = ({ post }) => {
             return (getContentFragment(index, children, typeObj, typeObj.type));
           })}
           <div className="flex flex-wrap items-center gap-2 mt-8">
-            <h3 className="text-lg font-semibold">Etiquetes:</h3>
+            <h2 className="text-lg font-semibold">Etiquetes:</h2>
             {post.categories.map((category) => <Tag key={uuid()} category={category} />)}
           </div>
         </div>
