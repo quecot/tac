@@ -69,7 +69,7 @@ const PostDetail: React.FC<Props> = ({ post }) => {
       <div className="relative mb-6 overflow-hidden shadow-md">
         <img
           src={post.featuredImage.url}
-          alt={post.title}
+          alt={`Imatge de portada generada amb Dall-E 2: ${post.title}`}
           className="object-top w-full h-full rounded-t-lg"
         />
       </div>
