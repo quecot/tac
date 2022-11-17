@@ -118,7 +118,7 @@ export const getSimilarPosts = async (categories: string[], slug: string) => {
 export const getCategories = async () => {
   const query = gql`
   query GetCategories {
-  categories {
+  categories (first: 100) {
     name
     slug
   }
