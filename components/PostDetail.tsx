@@ -48,10 +48,11 @@ const PostDetail: React.FC<Props> = ({ post }) => {
       case 'heading-four':
         return <h4 key={index} className="mb-4 font-semibold text-md">{modifiedText.map((item: any, i: number) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'image':
+        console.log(obj);
         return (
           <img
             key={index}
-            alt={obj.title}
+            alt={obj.altText ? obj.altText : obj.title}
             height={obj.height}
             width={obj.width}
             src={obj.src}
@@ -77,7 +78,7 @@ const PostDetail: React.FC<Props> = ({ post }) => {
         <div className="flex items-center w-full mb-8">
           <div className="flex items-center w-full mb-4 mr-8 lg:mb-0 lg:w-auto">
             <img
-              alt={post.author.name}
+              alt={`Autor: ${post.author.name}`}
               height="50px"
               width="50px"
               className="align-middle rounded-full"

@@ -14,7 +14,7 @@ const PostCard: React.FC<Props> = ({ post }) => (
     <div className="relative mb-6 overflow-hidden shadow-md pb-80">
       <img
         src={post.featuredImage.url}
-        alt={post.title}
+        alt={`Portada: ${post.title}`}
         className="absolute object-cover object-top w-full rounded-t-lg shadow-lg h-80 lg:rounded-lg"
       />
     </div>
@@ -26,7 +26,7 @@ const PostCard: React.FC<Props> = ({ post }) => (
     <div className="items-center justify-center block w-full mb-8 text-center lg:flex">
       <div className="flex items-center justify-center w-full mb-4 mr-8 lg:mb-0 lg:w-auto">
         <img
-          alt={post.author.name}
+          alt={`Autor: ${post.author.name}`}
           height="50px"
           width="50px"
           className="align-middle rounded-full"

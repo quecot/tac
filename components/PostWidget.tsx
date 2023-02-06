@@ -35,7 +35,7 @@ const PostWidget: React.FC<Props> = ({ categories, slug }) => {
           <div key={post.title} className="flex items-center w-full mb-4">
             <div className="flex-none w-16">
               <img
-                alt="post.title"
+                alt={`Portada: ${post.title}`}
                 height="60px"
                 width="60px"
                 className="align-middle rounded-full"
